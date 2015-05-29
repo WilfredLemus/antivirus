@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Antivirus{% endblock %}
+
+{% block nav %}
+<div class="navbar-wrapper">
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">My Antivirus</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Inicio</a></li>
+            <li class="active"><a href="/test/">My Antivirus Test</a></li>
+            <li><a href="#about">Antivirus</a></li>
+            <li><a href="#about">Acerca</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#contact">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container marketing">
+  <div class="row featurette" style="margin:80px 0;">
+    <div class="col-md-12">
+        <h2 class="featurette-heading" style="margin-top:10px;">My Antivirus <span style="color:#004366">Test</span> <br></h2>
+        <hr>
+        <form>
+            <div class="form-group col-md-12">
+              <label class="form-group col-lg-12">Selecciona tu sistema operativo:</label>
+              <div class="form-group col-lg-4">
+                <img class="img-circle" src="{% static 'img/logo-windows.jpg' %}" alt="Windows" width="140" height="140">
+                <div class="checkbox">
+                  <label><input type="radio" name="os" onchange="arqt('windows');" value="windows" /> Windows</label>
+                </div>
+                <div class="form-group col-md-12" id="arwindows" hidden>
+                  <div class="form-group col-md-6">
+                    <label for="ram">Arquitectura</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="arqwindows" placeholder="Arquitectura">
+                      <div class="input-group-addon">Bits</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="ram">RAM</label>
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="ram" placeholder="RAM">
+                      <div class="input-group-addon">RAM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-4">
+                <img class="img-circle" src="{% static 'img/logo-mac.jpg' %}" alt="MacOs" width="140" height="140">
+                <div class="checkbox">
+                  <label><input type="radio" name="os" onchange="arqt('mac');" value="macos" /> Mac OS</label>
+                </div>
+                <div class="form-group col-md-12" id="armac" hidden>
+                  <div class="form-group col-md-6">
+                    <label for="ram">Arquitectura</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="arqwindows" placeholder="Arquitectura">
+                      <div class="input-group-addon">Bits</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="ram">RAM</label>
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="ram" placeholder="RAM">
+                      <div class="input-group-addon">RAM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-4">
+                <img class="img-circle" src="{% static 'img/logo-linux.png' %}" alt="Linux" width="140" height="140">
+                <div class="checkbox">
+                  <label><input type="radio" name="os" onchange="arqt('linux');" value="linux" /> Linux</label>
+                </div>
+                <div class="form-group col-md-12" id="arlinux" hidden>
+                  <div class="form-group col-md-6">
+                    <label for="ram">Arquitectura</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="arqwindows" placeholder="Arquitectura">
+                      <div class="input-group-addon">Bits</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="ram">RAM</label>
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="ram" placeholder="RAM">
+                      <div class="input-group-addon">RAM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-12"> 
+              <label for="usos">Seleccione los usos cotidiano de su computadora:</label>           
+              <div data-toggle="buttons">
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Tareas de la Universidad
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Profesional (Trabajo)
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Redes Sociales
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Descargar Musica
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Descargar Video y/o Peliculas
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Almacenamiento de Documentos/Fotos/Videos
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Almacenamiento de Documento
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Profesional (Trabajo)
+                </label>
+                <label class="sp btn btn-primary">
+                  <input type="checkbox"> Redes Sociales
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group col-md-6 col-md-offset-5">
+              <button type="submit" class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                Enviar
+              </button>
+            </div>
+        </form>
+    </div>
+  </div>
+
+
+
+  <hr class="featurette-divider">
+  <footer>
+    <p class="pull-right"><a href="#">Arriba</a></p>
+    <p>&copy; 2015 My antivirus, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+  </footer>
+</div>
+
+<script>
+function arqt(tp) {
+  switch(tp){
+    case 'windows':
+      $("#arwindows").slideDown('slow');
+      $("#armac").slideUp('slow');
+      $("#arlinux").slideUp('slow');
+    break;
+    case 'mac':
+      $("#arwindows").slideUp('slow');
+      $("#armac").slideDown('slow');
+      $("#arlinux").slideUp('slow');
+    break;
+    case 'linux':
+      $("#arwindows").slideUp('slow');
+      $("#armac").slideUp('slow');
+      $("#arlinux").slideDown('slow');
+    break;
+  }
+}
+
+
+</script>
+{% endblock %} 
+
+
